@@ -20,7 +20,7 @@ public class test {
                     System.out.print("nome do token:");
                     String nome = s.next();
                     System.out.print("\n regex: ");
-                    String regex = s.next();
+                    String regex = s.nextLine();
                     a.adicionarToken(nome, regex);
                     break;
                 case 2:

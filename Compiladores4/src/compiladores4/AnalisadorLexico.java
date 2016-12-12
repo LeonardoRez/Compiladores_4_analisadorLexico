@@ -23,6 +23,9 @@ public class AnalisadorLexico {
     public void adicionarToken(String nome, String regex) {
         this.tokens.add(new Token(nome, Pattern.compile(regex)));
     }
+    public void resetarTokens(){
+        tokens.clear();
+    }
 
     public String tokenizar(String entrada) {
 
@@ -80,6 +83,13 @@ public class AnalisadorLexico {
             }
         }
         return aceitos;
+    }
+    public String getTokensToString(){
+        String result = "";
+        for(Token t: tokens){
+            result += t.getToString() +"\n";
+        }
+        return result;
     }
 
 }

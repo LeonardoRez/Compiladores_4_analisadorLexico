@@ -31,5 +31,8 @@ public class Token {
     public String toString() {
         return "<"+nomeToken+">";
     }
+    public String getToString(){
+        return nomeToken+"  "+expressao.pattern();
+    }
 
 }
